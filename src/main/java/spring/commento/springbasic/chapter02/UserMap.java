@@ -6,20 +6,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Getter
+@RequiredArgsConstructor
 public class UserMap {
 
-    private long id = 0;
+    private static Long id = 0L;
 
-    private final Map<Long, User> map = new HashMap<>();
+    private final Map<Long, User> map;
     private static class SINGLETON_HOLDER{
-        private static final UserMap INSTANCE = new UserMap();
+        private static final UserMap INSTANCE = new UserMap(new HashMap<>());
     }
 
     public static UserMap getInstance(){
         return SINGLETON_HOLDER.INSTANCE;
     }
 
-    public synchronized long getNextId() {
+    public synchronized Long getNextId() {
         return ++id;
     }
 }
