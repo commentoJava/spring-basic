@@ -3,13 +3,13 @@ package spring.commento.springbasic.chapter02.homework1.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import spring.commento.springbasic.chapter02.homework1.User;
-import spring.commento.springbasic.chapter02.homework1.repository.UserRepository;
+import spring.commento.springbasic.chapter02.homework1.repository.UserRepositoryImpl;
 
 @RequiredArgsConstructor
 @Service
 public class UserServiceImpl implements UserService{
 
-    private final UserRepository userRepository;
+    private final UserRepositoryImpl userRepository;
 
     @Override
     public User findByUserId(Long userId) {

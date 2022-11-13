@@ -1,9 +1,11 @@
 package spring.commento.springbasic.chapter02.homework1.repository;
 
 
+import org.springframework.stereotype.Repository;
 import spring.commento.springbasic.chapter02.SingletonClass;
 import spring.commento.springbasic.chapter02.homework1.User;
 
+@Repository
 public class UserRepositoryImpl implements UserRepository {
 
     @Override
