@@ -27,5 +27,4 @@ public class AppConfig {
     public MemberService companyMemberService(){
         return new CompanyMemberService(companyMemberRepository());
     }
-
 }
